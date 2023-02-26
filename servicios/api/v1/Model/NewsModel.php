@@ -15,7 +15,7 @@
 		{
 			$ini = $page * $limit;
 			$fin = $ini + $limit;
-			return $this->select("SELECT id, title, image, resume, date_format(publish_date, \"%d-%m-%Y\") as \"publish_date\" FROM news ORDER BY id DESC LIMIT ".$limit." OFFSET ".$ini.";");
+			return $this->select("SELECT id, title, autor, image, resume, date_format(publish_date, \"%d-%m-%Y\") as \"publish_date\" FROM news ORDER BY id DESC LIMIT ".$limit." OFFSET ".$ini.";");
 		}
 		public function getNewsLimit($limit) : array
 		{
